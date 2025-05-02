@@ -8,29 +8,41 @@ public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idProveedor")
-    private Long idProveedor;
+    @Column(name = "id_proveedor")
+    private Integer idProveedor; // Este es el campo que se va a usar para el ID del proveedor
 
-    @Column(nullable = false)
-    private String nombre;
+    @Column(name = "contacto_nombre")
+    private String contactoNombre;
 
-    @Column(length = 11)
-    private String ruc;
+    @Column(name = "contacto_telefono")
+    private String contactoTelefono;
 
+    @Column(name = "direccion")
     private String direccion;
-    private String telefono;
+
+    @Column(name = "email")
     private String email;
 
-    private String contactoNombre;
-    private String contactoTelefono;
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "ruc")
+    private String ruc;
+
+    @Column(name = "telefono")
+    private String telefono;
+
+    // Constructor sin argumentos
+    public Proveedor() {
+    }
 
     // Getters y Setters
 
-    public Long getIdProveedor() {
+    public Integer getIdProveedor() {
         return idProveedor;
     }
 
-    public void setIdProveedor(Long idProveedor) {
+    public void setIdProveedor(Integer idProveedor) {
         this.idProveedor = idProveedor;
     }
 
@@ -90,4 +102,5 @@ public class Proveedor {
         this.contactoTelefono = contactoTelefono;
     }
 }
+
 
